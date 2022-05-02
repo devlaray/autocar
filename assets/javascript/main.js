@@ -10,12 +10,10 @@ const navmenu = document.querySelector ('nav-menu'),
     toggle = document.querySelector ('.toggle'),
     close = document.querySelector ('.close')
 
-if(toggle){
     toggle.addEventListener('click', function(){
-        toggle.classList.add('show-menu');
+        toggle.classList.toggle('show-menu');
     })
     
-}
 
 // --------------popular swiper------------------------
 let swiperPopular = new Swiper(".popular-container", {
@@ -37,3 +35,27 @@ let swiperPopular = new Swiper(".popular-container", {
     },
   },
 });
+// -------------- mixit up filter------------------------
+var mixerFeatured = mixitup('.featured-content', {
+  selectors: {
+      target: '.featured-card'
+  },
+  animation: {
+      duration: 300
+  }
+});
+// -------------- link featured active------------------------
+const linkFeatured = document.querySelectorAll('.featured-item')
+function activeFeatured(){
+  linkFeatured.forEach(l=> l.classList.remove('activeFeatured'))
+  this.classList.add('activeFeatured')
+}
+linkFeatured.forEach(l=> l.addEventListener('click', activeFeatured))
+
+
+
+
+
+
+
+
