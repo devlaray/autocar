@@ -386,6 +386,9 @@ header{
     height: 100%;
     object-fit: cover;
 }
+.about-data{
+    flex-basis: 45%;
+}
 .about-card{
     width: 180px;
     position: absolute;
@@ -407,9 +410,6 @@ header{
 }
 .about-card-description{
     font-size: var(--smaller-font-size);
-}
-.about-data{
-    flex-basis: 45%;
 }
 .about-title{
     text-align: initial;
@@ -730,11 +730,14 @@ div.featured-content{
 /* ==================== offer ==================== */
 .offer{
     position: relative;
+    min-height: auto;
+    overflow: hidden;
 }
 .offer .container{
+    
     padding: 4rem 0 ;
     column-gap: 9rem;
-    grid-template-columns: max-content 624px;
+    /* grid-template-columns: max-content 624px; */
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
@@ -925,5 +928,47 @@ div.featured-content{
         cursor: pointer;
         top: 1rem;
         right: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+        
+    .about-data{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .offer-data{
+        text-align: left;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 70px; */
+    }
+   .offer-title{
+       text-align: initial;
+   }
+   .offer-discription{
+    margin-bottom: 3rem;
+    max-width: 250px;
+    }
+    /* .offer-discription{
+        padding: 0 30px 0 0;
+    } */
+    .offer-car{
+        position: relative;
+        /* right: -5rem;
+        bottom: 0; */
+    
     }
 }

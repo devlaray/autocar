@@ -52,9 +52,16 @@ function activeFeatured(){
 }
 linkFeatured.forEach(l=> l.addEventListener('click', activeFeatured))
 
+// -------------- scroll reveal------------------------
+const sr = scrollReveal ({
+ origin: 'top',
+ distance: '60px',
+ duration: 2500,
+ delay: 400,
+ //reset: true, 
+})
 
-
-
+sr.reveal(`.home-title`)
 
 
 
