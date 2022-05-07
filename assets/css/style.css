@@ -126,8 +126,6 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
     z-index: var(--fixed);
     transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -136,7 +134,7 @@ header{
     -o-transition: 0.5s;
 }
 .scrollheader{
-    background: rgba(0,0,0,0.3);
+    background: rgb(0,0,0);
     border-bottom: 1px solid rgba(91, 91, 91, 0.318);
 }
 .nav{
