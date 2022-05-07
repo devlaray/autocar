@@ -908,6 +908,7 @@ div.featured-content{
         height: 100%;
         background: hsla(0, 0%, 100%, .1);
         backdrop-filter: blur(65px);
+        -webkit-backdrop-filter: blur(65px);
         z-index: var(--fixed);
         transition: 0.5s;
         -webkit-transition: 0.5s;
