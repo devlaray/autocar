@@ -1,18 +1,26 @@
 const header = document.querySelector ('header');
 
-window.addEventListener("scroll", scrollHeader)
-function scrollHeader(){
-if (this.scrollY >= 50) header.classList.add ("scrollheader"); else header.classList.remove('scrollheader');
-}
+  window.addEventListener("scroll", function(){
+    header.classList.toggle('scrollheader', window.scrollY >0)
+  });
+ 
 
 // -------------------------click----------------
-const navmenu = document.querySelector ('nav-menu'),
-    toggle = document.querySelector ('.toggle'),
-    close = document.querySelector ('.close')
+const navmenu = document.querySelector ('.nav-menu');
+const toggle = document.querySelector ('.toggle');
+const close = document.querySelector ('.close');
 
-    toggle.addEventListener('click', function(){
-        toggle.classList.toggle('show-menu');
-    })
+  toggle.addEventListener('click', function(){
+    navmenu.classList.toggle('show-menu');
+  })
+  close.addEventListener('click', function(){
+      navmenu.classList.toggle('show-menu');
+  })
+
+  window.onscroll = function(){
+    navmenu.classList.remove('show-menu');
+
+  }
     
 
 // --------------popular swiper------------------------
@@ -28,10 +36,18 @@ let swiperPopular = new Swiper(".popular-container", {
 
   breakpoints: {
     768: {
-      slidesPerView: 4,
+      slidesPerView: 2,
+    },
+    425: {
+      slidesPerView: 2,
+    },
+    940: {
+      spaceBetween: 25,
+      slidesPerView: 3,
     },
     1024: {
-      spaceBetween: 48,
+      spaceBetween: 40,
+      slidesPerView: 4,
     },
   },
 });
