@@ -84,7 +84,6 @@ section{
 .btn{
     display: inline-block;
     background: var(--first-color);
-    backdrop-filter: blur(50px);
     color: var(--white-color);
     padding: 1rem 2rem;
     font-size: var(--normal-font-size);
@@ -127,6 +126,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     z-index: var(--fixed);
     transition: 0.5s;
     -webkit-transition: 0.5s;
